@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Wisma Delima | Booking</title>
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/form.css" />
+  </head>
+
+  <body>
+    <div id="booking" class="section">
+      <div class="section-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="booking-cta">
+                <h1>Booking sekarang <span style="color: #38b1e7;">--- nggak</span> pakai ribet</h1>
+                <p>
+                  Temukan kost terbaik didekat kampusmu! 
+                    best deal, one click away to finding your kost!
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-md-offset-1">
+              <div class="booking-form">
+
+              <form class="book-form" action="send.php" method="post" target="_self">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="name" />
+                        <span class="form-label">Nama</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="email" />
+                        <span class="form-label">Email</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="alamat" name="alamat" />
+                        <span class="form-label">Alamat</span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Kamar</span>
+                        <select class="form-control" name="kamar">
+                          <option>Private</option>
+                          <option>Ekonomis</option>
+
+                        </select>
+                        <span class="select-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea name="description" class="form-control" rows="3" id="description"></textarea>
+                        <span class="form-label">catatan</span>
+                      </div>
+                    </div>
+                    <input type="hidden" name="noWa" value="6285722485682">
+                  <div class="form-btn">
+                    <button type="submit" name="submit" class="submit-btn"><i class="fab fa-whatsapp"> Pesan via WhatsApp </i></button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+	  </div>
+	 
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $('.form-control').each(function () {
+        floatedLabel($(this));
+      });
+
+      $('.form-control').on('input', function () {
+        floatedLabel($(this));
+      });
+
+      function floatedLabel(input) {
+        var $field = input.closest('.form-group');
+        if (input.val()) {
+          $field.addClass('input-not-empty');
+        } else {
+          $field.removeClass('input-not-empty');
+        }
+      }
+    </script>
+
+
+  <script src="js/script.js"></script>
+
+ 
+  </body>
+</html>
